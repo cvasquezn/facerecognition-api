@@ -1,9 +1,8 @@
 const Clarifai = require('clarifai');
 
 const app = new Clarifai.App({//for clarifai's api
- apiKey: 'c83c746139c646e0859ee7421063fff1'
+ apiKey: 'API_KEY'
 });
-
 
 const handleApiCall = (req, res) =>{
 	app.models.predict(
@@ -17,9 +16,6 @@ const handleApiCall = (req, res) =>{
 	.catch( err=> res.status(400).json('error clarifai API') );
 
 }
-
-
-
 
 const handleImage = (req, res, db) => {
 	const { id } = req.body; //notice it's using req.params, not req.body
