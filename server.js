@@ -31,7 +31,7 @@ app.use(cors()); //we need to accept origin cross request + header
 
 
 app.get('/', (req, res) => {
-	res.send(database.user);
+	res.send('it is working');
 } )
 
 app.post('/signin', (req, res)=>{
