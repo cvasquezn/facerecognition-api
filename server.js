@@ -87,7 +87,7 @@ app.post('/imageurl', (req, res)=> {image.handleApiCall(req, res)} )//end put im
 // 	console.log('app is running on port 3000');
 // })
 
-//for deployment I have to set up port dynamically
+//for deployment I have to set up port dynamically. 
 app.listen(process.env.PORT || 3000, ()=> {
 	console.log(`app is running on port ${process.env.PORT}`);
 })
