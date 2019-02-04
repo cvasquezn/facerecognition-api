@@ -9,15 +9,28 @@ const register = require('./controllers/register');//best way to separete concer
 const image = require('./controllers/image');//best way to separete concern
 
 
-const db = knex({ //make a conecction to mysql database 
-  client: 'mysql',
+// const db = knex({ //make a conecction to mysql database 
+//   client: 'mysql',
+//   connection: {
+//     host : '127.0.0.1', //localhost
+//     user : 'root',
+//     password : '',
+//     database : 'smart-brain'
+//   }
+// });
+
+
+const db = require('knex')({ //make a conecction to postresql database 
+  client: 'pg',
+  version: '7.8',
   connection: {
-    host : '127.0.0.1', //localhost
+    host : '127.0.0.1',
     user : 'root',
     password : '',
     database : 'smart-brain'
   }
 });
+
 
 //test of conection to db
 // db.select().from('users')   //this its a promise
