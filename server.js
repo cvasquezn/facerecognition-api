@@ -20,7 +20,7 @@ const image = require('./controllers/image');//best way to separete concern
 // });
 
 
-const db = require('knex')({ //make a conecction to postresql database 
+const db = knex({ //make a conecction to postresql database 
   client: 'pg',
   version: '7.8',
   connection: {
