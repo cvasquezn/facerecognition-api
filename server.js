@@ -82,9 +82,12 @@ app.get('/profile/:id', (req, res)=>{
 app.put('/image', (req, res)=> {image.handleImage(req, res, db)} )//end put
 app.post('/imageurl', (req, res)=> {image.handleApiCall(req, res)} )//end put imageurl
 
+//for local develop I cant set up the port 
+// app.listen(3000, ()=> {
+// 	console.log('app is running on port 3000');
+// })
 
-app.listen(3000, ()=> {
-	console.log('app is running on port 3000');
+//for deployment I have to set up port dynamically
+app.listen(process.env.PORT || 3000, ()=> {
+	console.log(`app is running on port ${process.env.PORT}`);
 })
-
-
