@@ -20,18 +20,27 @@ const image = require('./controllers/image');//best way to separete concern
 // });
 
 
-const db = knex({ //make a conecction to postresql database 
+// const db = knex({ //make a conecction to postresql database sing localhost
+//   client: 'pg',
+//   version: '7.8',
+//   connection: {
+//     host : '127.0.0.1',
+//     user : 'root',
+//     password : '',
+//     database : 'smart-brain'
+//   }
+// });
+
+const db = knex({ //make a conecction to postresql database sing localhost
   client: 'pg',
   version: '7.8',
   connection: {
-    host : '127.0.0.1',
+    host : 'postgresql-horizontal-38873',
     user : 'root',
     password : '',
     database : 'smart-brain'
   }
 });
-
-
 //test of conection to db
 // db.select().from('users')   //this its a promise
 // 	.then( data => console.log(data)); //the response its not json
