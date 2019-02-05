@@ -35,10 +35,8 @@ const db = knex({ //make a conecction to postresql database sing localhost
   client: 'pg',
   version: '7.8',
   connection: {
-    host : 'postgresql-horizontal-38873',
-    user : 'root',
-    password : '',
-    database : 'smart-brain'
+    host : 'process.env.DATABASE_URL', //from heroku documentation
+    ssl: true
   }
 });
 //test of conection to db
