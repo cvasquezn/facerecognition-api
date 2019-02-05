@@ -27,6 +27,7 @@ const handleRegister = (req, res, db, bcrypt)=>{
 						console.log(idUser);
 							db('users').where('id', idUser) //get the user with that id. This query return an array with object like this: [{}]
 								.then(user => { 
+									console.log("user get from bd - query's response");
 									console.log(user[0]);
 									res.json(user[0])  //send user as json
 								})
