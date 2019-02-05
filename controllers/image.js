@@ -1,7 +1,7 @@
 const Clarifai = require('clarifai');
 
 const app = new Clarifai.App({//for clarifai's api
- apiKey: 'c83c746139c646e0859ee7421063fff1'
+ apiKey: process.env.API_KEY_CLARIFAI //SET AS CONFIG VARIABLE ON HEROKU
 });
 
 const handleApiCall = (req, res) =>{
