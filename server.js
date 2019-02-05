@@ -35,7 +35,7 @@ const db = knex({ //make a conecction to postresql database sing localhost
   client: 'pg',
   version: '7.8',
   connection: {
-    host : 'process.env.DATABASE_URL', //from heroku documentation
+    connectionString : 'process.env.DATABASE_URL', //from heroku documentation
     ssl: true
   }
 });
